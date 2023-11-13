@@ -1,0 +1,31 @@
+.wrapper {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.typing-demo {
+  width: 0; /* Mulai dengan lebar 0 */
+  animation: typing 2s steps(11), blink 0.5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-family: monospace;
+  font-size: 2em;
+  display: inline-block; /* Untuk menjaga teks dalam satu baris */
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 22ch; /* Sesuaikan dengan panjang teks Anda */
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
